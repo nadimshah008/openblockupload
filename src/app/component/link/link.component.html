@@ -1,0 +1,14 @@
+<p *ngFor="let item of selectedData; let i = index">
+  {{ item.value }} <button (click)="removeSelectedItem(i)">Remove</button>
+</p>
+
+<input type="text" [(ngModel)]="searchText" (input)="getChangedValue($event)" />
+
+<div class="options">
+  <li
+    *ngFor="let item of competetiorsOptionListVal"
+    (click)="getSelectedData(item)"
+  >
+    {{ item.value }}
+  </li>
+</div>
